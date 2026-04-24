@@ -1,0 +1,214 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Página toda */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Caixa do formulário */
+.card {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  border: 1px solid #c0ccff;
+  width: 100%;
+  max-width: 380px;
+}
+
+/* Logo */
+.logo {
+  margin-bottom: 20px;
+}
+
+/* Título */
+h1 {
+  font-size: 22px;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+/* Subtítulo */
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+/* Alerta de erro / sucesso */
+.alert {
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  border: 1px solid;
+}
+
+.alert.error {
+  background-color: #fff0f0;
+  border-color: #ffaaaa;
+  color: #cc0000;
+}
+
+.alert.success {
+  background-color: #f0fff4;
+  border-color: #aaddbb;
+  color: #007733;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Campos do formulário */
+.field {
+  margin-bottom: 16px;
+}
+
+.field label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.forgot {
+  color: #3355ff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #3355ff;
+}
+
+input.invalid {
+  border-color: red;
+}
+
+/* Wrapper da senha (para o botão de mostrar/ocultar) */
+.password-wrap {
+  position: relative;
+}
+
+.password-wrap input {
+  padding-right: 42px;
+}
+
+.toggle-pwd {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+}
+
+/* Mensagem de erro inline */
+.error-msg {
+  display: block;
+  font-size: 12px;
+  color: red;
+  margin-top: 4px;
+  min-height: 16px;
+}
+
+/* Lembrar de mim */
+.remember {
+  margin-bottom: 20px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+}
+
+.checkmark { display: none; }
+
+/* Botão entrar */
+.btn {
+  width: 100%;
+  background-color: #3355ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  background-color: #2244dd;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Loader giratório */
+.loader {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Link de cadastro */
+.signup-link {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.signup-link a {
+  color: #3355ff;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}

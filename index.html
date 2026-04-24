@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="logo">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <rect width="36" height="36" rx="10" fill="#1a1a2e"/>
+          <path d="M10 18 L18 10 L26 18 L18 26 Z" fill="#e94560" opacity="0.9"/>
+          <circle cx="18" cy="18" r="4" fill="#fff"/>
+        </svg>
+      </div>
+
+      <h1>Bem-vindo de volta</h1>
+      <p class="subtitle">Entre na sua conta para continuar</p>
+
+      <div id="alert" class="alert hidden"></div>
+
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="seu@email.com"
+            autocomplete="email"
+          />
+          <span class="error-msg" id="emailError"></span>
+        </div>
+
+        <div class="field">
+          <label for="password">
+            Senha
+            <a href="#" class="forgot" onclick="return false">Esqueceu?</a>
+          </label>
+          <div class="password-wrap">
+            <input
+              type="password"
+              id="password"
+              placeholder="••••••••"
+              autocomplete="current-password"
+            />
+            <button type="button" class="toggle-pwd" id="togglePwd" aria-label="Mostrar senha">
+              <svg id="eyeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+          <span class="error-msg" id="passwordError"></span>
+        </div>
+
+        <div class="remember">
+          <label class="checkbox-label">
+            <input type="checkbox" id="remember" />
+            <span class="checkmark"></span>
+            Lembrar de mim
+          </label>
+        </div>
+
+        <button type="submit" class="btn" id="submitBtn">
+          <span id="btnText">Entrar</span>
+          <span id="btnLoader" class="loader hidden"></span>
+        </button>
+      </form>
+
+      <p class="signup-link">
+        Não tem uma conta? <a href="#">Cadastre-se</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
