@@ -122,8 +122,15 @@ form.addEventListener('submit', async (e) => {
       localStorage.removeItem('rememberedEmail');
     }
 
-    showAlert('✓ Login realizado com sucesso! Redirecionando…', 'success');
+    showAlert('✓ Login realizado com sucesso! aeeeeeee', 'success');
 
     
+
+  } catch (err) {
+    showAlert(err.message, 'error');
+  } finally {
+    submitBtn.disabled = false;
+    btnText.classList.remove('hidden');
+    btnLoader.classList.add('hidden');
   }
 });
