@@ -124,15 +124,6 @@ form.addEventListener('submit', async (e) => {
 
     showAlert('✓ Login realizado com sucesso! Redirecionando…', 'success');
 
-    setTimeout(() => {
-      alert(`Bem-vindo, ${emailVal}!\n\nEste é um projeto de demonstração.`);
-    }, 1000);
-
-  } catch (err) {
-    showAlert(err.message, 'error');
-  } finally {
-    submitBtn.disabled = false;
-    btnText.classList.remove('hidden');
-    btnLoader.classList.add('hidden');
+    
   }
 });
