@@ -1,11 +1,11 @@
-/* Reset básico */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Página toda */
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f4ff;
@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
 }
 
-/* Caixa do formulário */
+
 .card {
   background-color: white;
   padding: 40px;
@@ -25,12 +25,12 @@ body {
   max-width: 380px;
 }
 
-/* Logo */
+
 .logo {
   margin-bottom: 20px;
 }
 
-/* Título */
+
 h1 {
   font-size: 22px;
   color: #1a1a1a;
@@ -44,7 +44,6 @@ h1 {
   margin-bottom: 24px;
 }
 
-/* Alerta de erro / sucesso */
 .alert {
   padding: 10px 14px;
   border-radius: 6px;
@@ -69,7 +68,7 @@ h1 {
   display: none;
 }
 
-/* Campos do formulário */
+
 .field {
   margin-bottom: 16px;
 }
@@ -111,7 +110,7 @@ input.invalid {
   border-color: red;
 }
 
-/* Wrapper da senha (para o botão de mostrar/ocultar) */
+
 .password-wrap {
   position: relative;
 }
@@ -131,7 +130,7 @@ input.invalid {
   color: #888;
 }
 
-/* Mensagem de erro inline */
+
 .error-msg {
   display: block;
   font-size: 12px;
@@ -140,7 +139,7 @@ input.invalid {
   min-height: 16px;
 }
 
-/* Lembrar de mim */
+
 .remember {
   margin-bottom: 20px;
 }
@@ -156,7 +155,7 @@ input.invalid {
 
 .checkmark { display: none; }
 
-/* Botão entrar */
+
 .btn {
   width: 100%;
   background-color: #3355ff;
@@ -183,7 +182,6 @@ input.invalid {
   cursor: not-allowed;
 }
 
-/* Loader giratório */
 .loader {
   width: 16px;
   height: 16px;
@@ -197,7 +195,7 @@ input.invalid {
   to { transform: rotate(360deg); }
 }
 
-/* Link de cadastro */
+
 .signup-link {
   text-align: center;
   font-size: 14px;

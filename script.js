@@ -1,14 +1,10 @@
-// ======================
-//  Usuários fictícios
-// ======================
+
 const USERS = [
-  { email: 'admin@exemplo.com', password: '123456' },
-  { email: 'usuario@teste.com', password: 'senha123' },
+  { email: 'teste@gmail.com', password: '123456' },
+  { email: '', password: '' },
 ];
 
-// ======================
-//  Elementos do DOM
-// ======================
+
 const form        = document.getElementById('loginForm');
 const emailInput  = document.getElementById('email');
 const pwdInput    = document.getElementById('password');
@@ -21,9 +17,9 @@ const btnLoader   = document.getElementById('btnLoader');
 const alertBox    = document.getElementById('alert');
 const rememberBox = document.getElementById('remember');
 
-// ======================
+
 //  Lembrar sessão
-// ======================
+
 window.addEventListener('DOMContentLoaded', () => {
   const saved = localStorage.getItem('rememberedEmail');
   if (saved) {
@@ -32,9 +28,8 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// ======================
 //  Mostrar/ocultar senha
-// ======================
+
 toggleBtn.addEventListener('click', () => {
   const isHidden = pwdInput.type === 'password';
   pwdInput.type = isHidden ? 'text' : 'password';
@@ -46,9 +41,8 @@ toggleBtn.addEventListener('click', () => {
     : `<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>`;
 });
 
-// ======================
 //  Validações
-// ======================
+
 function validateEmail(value) {
   if (!value.trim()) return 'O e-mail é obrigatório.';
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return 'Digite um e-mail válido.';
@@ -66,7 +60,6 @@ function setFieldError(input, errorEl, msg) {
   input.classList.toggle('invalid', !!msg);
 }
 
-// Validação em tempo real
 emailInput.addEventListener('input', () => {
   setFieldError(emailInput, emailError, validateEmail(emailInput.value));
 });
@@ -75,9 +68,7 @@ pwdInput.addEventListener('input', () => {
   setFieldError(pwdInput, pwdError, validatePassword(pwdInput.value));
 });
 
-// ======================
-//  Alerta global
-// ======================
+
 function showAlert(msg, type = 'error') {
   alertBox.textContent = msg;
   alertBox.className = `alert ${type}`;
@@ -88,9 +79,9 @@ function hideAlert() {
   alertBox.classList.add('hidden');
 }
 
-// ======================
-//  Simulação de login
-// ======================
+
+
+
 function fakeLogin(email, password) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -100,9 +91,7 @@ function fakeLogin(email, password) {
   });
 }
 
-// ======================
-//  Submit
-// ======================
+
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   hideAlert();
@@ -126,7 +115,7 @@ form.addEventListener('submit', async (e) => {
   try {
     await fakeLogin(emailVal, pwdVal);
 
-    // Lembrar e-mail
+    
     if (rememberBox.checked) {
       localStorage.setItem('rememberedEmail', emailVal);
     } else {
