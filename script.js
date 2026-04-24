@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
     emailInput.value = saved;
     rememberBox.checked = true;
   }
-});
+}); 
 
 //  Mostrar/ocultar senha
 
